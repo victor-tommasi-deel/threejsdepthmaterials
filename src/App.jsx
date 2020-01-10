@@ -20,7 +20,7 @@ class App extends React.Component {
     const sphere = createSphere(3, 30, 30, { z: 0, x: 5 }, 0xff0040);
 
     const start = init({ cube, sphere }, { z: 15 });
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera } = start;
     this.setState({
